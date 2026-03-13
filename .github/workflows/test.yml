@@ -57,15 +57,15 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Install dependencies
         run: |
-          yarn
+          npm ci
 
       - name: Clean, build, format, lint, package, and test
         run: |
-          yarn all
+          npm run all
 
 #      - name: Check if packaged properly
 #        run: |

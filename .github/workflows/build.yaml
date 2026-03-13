@@ -20,12 +20,11 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Node.JS 20
+      - name: Setup Node.JS 24
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 24.x
           cache: npm
-      - run: npm install
       - run: npm ci
       - run: npm run build
 #      - run: npm run format-check  ---   bypass check because seems there is incompatiility between GitHub env and local windows env
